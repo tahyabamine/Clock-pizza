@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+    </style>
+</head>
+<body>
+     <canvas width="600" height="600" style="background-color:white"></canvas>
+   <script>
+       const canvas =document.querySelector('canvas');
+       const ctx = canvas.getContext('2d');
+       ctx.beginPath()
+         ctx.lineWidth=15;
+  ctx.arc(300, 300, 290, 0 , 2 * Math.PI);
+   ctx.fillStyle = "#e6b86a";
+   ctx.stroke();
+  ctx.fill();
+
+ctx.beginPath()
+ctx.lineWidth=20;
+  ctx.arc(300, 300, 250, 0 , 2 * Math.PI);
+   
+   ctx.fillStyle = "#f9c637";
+  
+   ctx.stroke();
+  ctx.fill();
+function jambon(x,y){
+ctx.fillStyle = "#be1e2d";
+ctx.beginPath();
+ctx.arc(x, y, 35, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.fill();
+};
+jambon(120,220);
+jambon(180,450);
+jambon(450,180);
+jambon(400,400);
+jambon(300,300);
+jambon(250,120);
+function olive (a,b){  
+ctx.beginPath();
+ctx.arc(a, b, 20, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.fillStyle = "#202020";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(a,b, 5, 0, 2 * Math.PI);
+ctx.fillStyle = "#fdd05b";
+ctx.stroke();
+ctx.fill();
+};
+olive(380,120);
+olive(100,380);
+olive(300,480);
+olive(250,200);
+olive(480,380);
+olive(200,300);
+function lettuce(c,d){
+ctx.rect(c, d, 10, 30);
+ctx.lineJoin="round";
+ctx.lineWidth=8;
+ctx.fillStyle = "#00a551"
+ctx.stroke();
+ctx.fill();
+};
+lettuce(200,230);
+lettuce(80,280);
+lettuce(460,300);
+lettuce(380,190);
+lettuce(230,350);
+   </script>
+</body>
+</html>
